@@ -40,10 +40,9 @@ Antes de executar o projeto, certifique-se de ter:
 
 As seguintes bibliotecas Python devem ser instaladas. Use o comando abaixo para instalá-las:
 
-```bash
-`pip install dash dash-bootstrap-components pandas plotly psycopg2´
+`pip install dash dash-bootstrap-components pandas plotly psycopg2`
 
-### Configuração do Banco de Dados
+## Configuração do Banco de Dados
 
 1. **Crie um banco de dados chamado `voos_aeroporto` no PostgreSQL.**
 
@@ -69,8 +68,8 @@ As seguintes bibliotecas Python devem ser instaladas. Use o comando abaixo para 
 ## Insira os dados necessários na tabela voos.
 
 ## Configure suas credenciais no arquivo dashboard.py, na função conectar_postgres:
-
-def conectar_postgres():
+~~~python
+  def conectar_postgres():
     conexao = psycopg2.connect(
         host="localhost",
         database="voos_aeroporto",
@@ -78,10 +77,10 @@ def conectar_postgres():
         password="SUA_SENHA_AQUI",  
         port="5432"
     )
-    return conexao
-
+    return conexao;
+  ~~~
 ## Como Rodar o Projeto
-Execute o arquivo dashboard.py
+Execute o arquivo ```dashboard.py```
 
-Acesse o painel no navegador, no endereço:
-http://127.0.0.1:8050/
+### Acesse o painel no navegador, no endereço:
+```http://127.0.0.1:8050/```
